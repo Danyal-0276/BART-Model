@@ -251,18 +251,26 @@ print(summary)
 ```python
 from transformers import pipeline
 
-summarizer = pipeline(
-    "summarization",
-    model="daniB2112/bart-large-cnn-news-summarizer",
-)
+pipe = pipeline("summarization", model="daniB2112/bart-large-cnn-news-summarizer")
 
-result = summarizer(
+result = pipe(
     article,
     max_length=80,
     min_length=30,
     do_sample=False,
 )
 print(result[0]["summary_text"])
+```
+
+### Load with AutoModel
+
+```python
+from transformers import AutoModel
+
+model = AutoModel.from_pretrained(
+    "daniB2112/bart-large-cnn-news-summarizer",
+    dtype="auto"
+)
 ```
 
 ### Batch Inference
@@ -431,7 +439,7 @@ After a full run the following files are produced under `/kaggle/working/bart_fi
 
 ## Authors
 
-**Danyal Tanveer*
+**Danyal Tanveer**
 
 ---
 
@@ -440,7 +448,7 @@ After a full run the following files are produced under `/kaggle/working/bart_fi
 If you use this work, please cite:
 
 ```bibtex
-@misc{danyal_bart_summarizer,
+@misc{danyal_tanveer_bart_summarizer,
   author    = {Danyal Tanveer},
   title     = {BART-Large-CNN Fine-Tuned on CNN/DailyMail for News Summarization},
   year      = {2024},
