@@ -431,7 +431,7 @@ After a full run the following files are produced under `/kaggle/working/bart_fi
 
 ## Authors
 
-**Danyal & Nauman Irshad**
+**Danyal Tanveer*
 
 ---
 
@@ -440,8 +440,8 @@ After a full run the following files are produced under `/kaggle/working/bart_fi
 If you use this work, please cite:
 
 ```bibtex
-@misc{danyal_nauman_bart_summarizer,
-  author    = {Danyal and Nauman Irshad},
+@misc{danyal_bart_summarizer,
+  author    = {Danyal Tanveer},
   title     = {BART-Large-CNN Fine-Tuned on CNN/DailyMail for News Summarization},
   year      = {2024},
   publisher = {GitHub},
