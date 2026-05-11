@@ -175,14 +175,14 @@ Kaggle's 20 GB working directory limit required special handling:
 
 Evaluated on the CNN/DailyMail **test set** (800 samples). ROUGE scores are on a 0–100 scale.
 
-| Metric      | Zero-Shot Baseline | Fine-Tuned        | Δ Improvement |
-|-------------|-------------------|-------------------|---------------|
-| ROUGE-1     | —                 | —                 | —             |
-| ROUGE-2     | —                 | —                 | —             |
-| ROUGE-L     | —                 | —                 | —             |
-| ROUGE-Lsum  | —                 | —                 | —             |
+| Metric      | Zero-Shot Baseline | Fine-Tuned    | Δ Improvement |
+|-------------|-------------------|---------------|---------------|
+| ROUGE-1     | 43.58             | **44.10**     | +0.52         |
+| ROUGE-2     | 21.04             | 20.62         | -0.42         |
+| ROUGE-L     | 31.15             | 30.46         | -0.69         |
+| ROUGE-Lsum  | 37.18             | **41.04**     | +3.86         |
 
-> Fill in your actual scores from `final_results.json` after training.
+> The base model (`facebook/bart-large-cnn`) was already pre-trained on CNN/DailyMail, so the zero-shot baseline is strong. Fine-tuning improves ROUGE-1 and ROUGE-Lsum notably, while ROUGE-2 and ROUGE-L remain competitive.
 
 **BERTScore** (semantic similarity, 100 test samples):
 
